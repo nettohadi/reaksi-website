@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+Pro&display=swap);
+.banner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Source Sans Pro;
+    text-align: center;
+}
+
+.big-logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.big-logo {
+    background-image: url(/images/Reaksi_indigo_logo.png);
+    width: 100px;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.big-logo-wrapper > h1 {
+    line-height: 100px;
+    letter-spacing: 3px;
+    font-size: 60px;
+}
+
+.banner h3 {
+    letter-spacing: 1px;
+}
+
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.feature > h2 {
+    margin-bottom: 15px;
+}
+
+.feature > img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 20px;
+}
+
+.feature > h4 {
+    letter-spacing: .5px;
+    font-weight: 600;
+    min-height: 120px;
+}
+.features-wrapper {
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+.difference-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.difference-wrapper  h1 {
+    text-align: center;
+}
+
+.difference-wrapper li {
+    margin: 10px 0px;
+}
+
+.difference-wrapper  h3 {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+
+header {
+    color:red;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo_wrapper {
+    max-width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    background-image: url(/images/Reaksi_logo.png);
+    width: 60px;
+    height: 50px;
+    background-size: cover;
+    max-width: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo_wrapper > h2 {
+    flex: 1;
+    line-height: 50px;
+    font-family: Source Sans Pro;
+    letter-spacing: 1px;
+}
+
+nav > ul {
+    list-style: none;
+
+}
+
+nav > ul > li {
+    display: inline;
+    margin: 0px 10px;
+    font-size: 17px;
+}
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0px;
+    overflow: auto;
+    background-color: #1a1e2b;
+    font-family: Source Sans Pro;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+}
+
+
+.primary-bg-color {
+    background-color: #8dba6f;
+}
+
+.primary-font-color {
+    color: #8dba6f;
+}
+
+.primary-border-color{
+    border-color: #8dba6f;
+}
+
+.secondary-bg-color {
+    background-color: #1a1e2b;
+}
+
+.secondary-font-color {
+    color: #1a1e2b;
+}
+
+.secondary-border-color {
+    border-color: #1f253b;
+}
+
+.primary-button {
+    background-color: #8dba6f;
+    color: #1a1e2b;
+    border: 2px solid #1a1e2b;
+}
+.secondary-button {
+    background-color: #1a1e2b;;
+    color: #8dba6f;
+    border: 2px solid #1a1e2b;
+}
+.primary-button,
+.secondary-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.primary-button.big,
+.secondary-button.big {
+    font-size: 20px;
+    min-width: 170px;
+    font-weight: 600;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 30px 20px;
+    min-height: 300px;
+    gap: 30px;
+}
+
+.line-before:before {
+    content: '';
+    border-top: 2px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    height: 40px;
+    width: 95%;
+}
+
+.line-after:after {
+    content: '';
+    border-top: 2px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    height: 40px;
+    width: 95%;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrapper  h1 {
+    text-align: center;
+}
+
+.wrapper li {
+    margin: 10px 0px;
+}
+
+.wrapper  h3 {
+    font-weight: 400;
+}
+
+.inner-wrapper {
+    max-width: 800px;
+}
+
+.rounded-container {
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.primary-button,
+.secondary-button {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 40px;
+}

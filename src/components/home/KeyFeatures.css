@@ -1,0 +1,7 @@
+.features-wrapper {
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}

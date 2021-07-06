@@ -1,0 +1,37 @@
+.banner {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Source Sans Pro;
+    text-align: center;
+}
+
+.big-logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.big-logo {
+    background-image: url('../../assets/images/Reaksi_indigo_logo.png');
+    width: 100px;
+    height: 110px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.big-logo-wrapper > h1 {
+    line-height: 100px;
+    letter-spacing: 3px;
+    font-size: 60px;
+}
+
+.banner h3 {
+    letter-spacing: 1px;
+}
+

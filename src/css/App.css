@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+Pro&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body,html {
+    margin: 0px;
+    overflow: auto;
+    background-color: #1a1e2b;
+    font-family: Source Sans Pro;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+}
+
+
+.primary-bg-color {
+    background-color: #8dba6f;
+}
+
+.primary-font-color {
+    color: #8dba6f;
+}
+
+.primary-border-color{
+    border-color: #8dba6f;
+}
+
+.secondary-bg-color {
+    background-color: #1a1e2b;
+}
+
+.secondary-font-color {
+    color: #1a1e2b;
+}
+
+.secondary-border-color {
+    border-color: #1f253b;
+}
+
+.primary-button {
+    background-color: #8dba6f;
+    color: #1a1e2b;
+    border: 2px solid #1a1e2b;
+}
+.secondary-button {
+    background-color: #1a1e2b;;
+    color: #8dba6f;
+    border: 2px solid #1a1e2b;
+}
+.primary-button,
+.secondary-button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.primary-button.big,
+.secondary-button.big {
+    font-size: 20px;
+    min-width: 170px;
+    font-weight: 600;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px 30px 20px;
+    min-height: 300px;
+    gap: 30px;
+}
+
+.line-before:before {
+    content: '';
+    border-top: 2px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    height: 40px;
+    width: 95%;
+}
+
+.line-after:after {
+    content: '';
+    border-top: 2px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style: solid;
+    height: 40px;
+    width: 95%;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.wrapper  h1 {
+    text-align: center;
+}
+
+.wrapper li {
+    margin: 10px 0px;
+}
+
+.wrapper  h3 {
+    font-weight: 400;
+    font-size: 21px;
+}
+
+.inner-wrapper {
+    max-width: 800px;
+}
+
+.rounded-container {
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.primary-button,
+.secondary-button {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 40px;
+}

@@ -1,0 +1,42 @@
+header {
+    color:red;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo_wrapper {
+    max-width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.logo {
+    background-image: url('../../assets/images/Reaksi_logo.png');
+    width: 60px;
+    height: 50px;
+    background-size: cover;
+    max-width: 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo_wrapper > h2 {
+    flex: 1;
+    line-height: 50px;
+    font-family: Source Sans Pro;
+    letter-spacing: 1px;
+}
+
+nav > ul {
+    list-style: none;
+
+}
+
+nav > ul > li {
+    display: inline;
+    margin: 0px 10px;
+    font-size: 17px;
+}
