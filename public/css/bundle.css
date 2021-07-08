@@ -70,44 +70,35 @@
     justify-content: center;
     gap: 40px;
 }
-.difference-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.difference-wrapper  h1 {
-    text-align: center;
-}
-
-.difference-wrapper li {
-    margin: 10px 0px;
-}
-
-.difference-wrapper  h3 {
-    font-weight: 400;
-    font-size: 21px;
-}
-
-
 header {
     color:red;
-    padding: 10px 10px;
+    padding: 10px 20px 10px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    border-bottom: 1px solid rgba(141, 186, 111, 0.58);
 }
+
 
 .logo_wrapper {
     max-width: 170px;
     display: flex;
     flex-direction: row;
     justify-content: start;
+    cursor: pointer
 }
 
 .logo {
     background-image: url(/images/Reaksi_logo.png);
+}
+
+.secondary-logo {
+    background-image: url(/images/Reaksi_indigo_logo.png);
+}
+
+.logo, .secondary-logo {
     width: 60px;
     height: 50px;
     background-size: cover;
@@ -115,6 +106,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
 
 .logo_wrapper > h2 {
     flex: 1;
@@ -132,9 +125,153 @@ nav > ul > li {
     display: inline;
     margin: 0px 10px;
     font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
 }
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 88vh;
+    margin-top: 73px;
+}
+
+.main-wrapper.fixed-height {
+    max-height: 88vh;
+}
+
+.main-wrapper > main {
+    flex: 1;
+    overflow-y: auto;
+}
+.sidebar-wrapper {
+    width: 290px;
+    background-color: #151a23;
+}
+
+@media screen and (max-width:1000px) {
+    .sidebar-wrapper {
+        display: none;
+    }
+}
+
+
+.sidebar-wrapper ul {
+    list-style: none;
+}
+
+.sidebar-wrapper li {
+    font-size: 20px;
+    margin: 25px 0px;
+    max-width: 150px;
+    text-align: left;
+    padding: 5px 0px 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar-wrapper li:not(.is-active):hover {
+    background-color: rgba(141, 186, 111, 0.56);
+    color: black;
+    transition: all .8s;
+}
+/**
+ * Shades of Purple Theme — for Highlightjs.
+ *
+ * @author (c) Ahmad Awais <https://twitter.com/mrahmadawais/>
+ * @link GitHub Repo → https://github.com/ahmadawais/Shades-of-Purple-HighlightJS
+ * @version 1.5.0
+ */
+
+.hljs {
+  background: #2d2b57;
+  color: #e3dfff;
+  font-weight: normal;
+}
+
+.hljs-subst {
+  color: #e3dfff;
+}
+
+.hljs-title {
+  color: #fad000;
+  font-weight: normal;
+}
+
+.hljs-name {
+  color: #a1feff;
+}
+
+.hljs-tag {
+  color: #ffffff;
+}
+
+.hljs-attr {
+  color: #f8d000;
+  font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-selector-tag,
+.hljs-section {
+  color: #fb9e00;
+}
+
+.hljs-keyword {
+  color: #fb9e00;
+}
+
+.hljs-string,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-code,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-quote,
+.hljs-deletion {
+  color: #4cd213;
+}
+
+.hljs-meta,
+.hljs-meta .hljs-string {
+  color: #fb9e00;
+}
+
+.hljs-comment {
+  color: #ac65ff;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name,
+.hljs-strong {
+  font-weight: normal;
+}
+
+.hljs-literal,
+.hljs-number {
+  color: #fa658d;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
+}
+
+code {
+    line-height: 28px;
 }
 
 body,html {
@@ -246,6 +383,7 @@ h1, h2, h3, h4, h5 {
 
 .wrapper  h3 {
     font-weight: 400;
+    font-size: 21px;
 }
 
 .inner-wrapper {
@@ -265,4 +403,43 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     font-size: 40px;
+}
+
+.doc-wrapper {
+    padding: 30px;
+    color: rgb(176, 176, 176);
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.doc-wrapper h1 {
+    text-align: center;
+    font-size: 60px;
+    letter-spacing: 3px;
+}
+
+.doc-wrapper h2 {
+    margin-top: 40px;
+}
+
+
+.doc-wrapper p {
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+.doc-wrapper pre {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+code.sh {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #1f253b;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 100%;
+    display: block;
 }

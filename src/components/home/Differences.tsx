@@ -27,8 +27,8 @@ export default function Differences() {
           </li>
           <li>
             <h3>
-              Even though we're actively working on it. Many of React features
-              may not exist Reaksi yet.
+              Even though we're actively working on it, Many of React features
+              may not exist in Reaksi yet.
             </h3>
           </li>
           <li>

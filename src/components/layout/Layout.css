@@ -1,0 +1,15 @@
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+    min-height: 88vh;
+    margin-top: 73px;
+}
+
+.main-wrapper.fixed-height {
+    max-height: 88vh;
+}
+
+.main-wrapper > main {
+    flex: 1;
+    overflow-y: auto;
+}

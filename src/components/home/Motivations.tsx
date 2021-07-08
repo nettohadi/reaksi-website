@@ -15,8 +15,8 @@ export default function Motivations() {
             So, why do this ? Well, it's simple. We build Reaksi to learn about
             React and JavaScript in general. It's codebase is still very simple,
             quite easy to read and follow. If you're like us, willing to
-            understand how React works under the hood, you can join us. fork our
-            github, and make your own UI library.
+            understand how React works under the hood, you can join us. fork us
+            on github, and make your own UI library.
           </p>
         </div>
       </div>

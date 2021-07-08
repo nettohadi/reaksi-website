@@ -4,9 +4,9 @@
   "description": "reaksi template",
   "main": "index.tsx",
   "scripts": {
-    "start": "webpack serve --open",
-    "dev": "webpack serve",
-    "build": "webpack --mode production",
+    "start": "set NODE_ENV=development && webpack serve --open",
+    "dev": "set NODE_ENV=development && webpack serve",
+    "build": "set NODE_ENV=production && webpack --mode production",
     "test": "test"
   },
   "keywords": [
@@ -17,7 +17,10 @@
   "author": "hadi_sy",
   "license": "MIT",
   "dependencies": {
-    "reaksi": "latest"
+    "@types/highlightjs": "^9.12.1",
+    "cross-env": "^7.0.3",
+    "highlight.js": "^11.0.1",
+    "reaksi": "^1.0.0-alpha.47"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -38,5 +41,13 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 3,
+    "semi": true,
+    "jsxSingleQuote": true,
+    "trailingComma": "es5",
+    "proseWrap": "always"
   }
 }
