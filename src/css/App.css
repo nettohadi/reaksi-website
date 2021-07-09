@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+Pro&display=swap');
-@import "~highlight.js/styles/shades-of-purple.css";
+@import "~highlight.js/styles/atom-one-dark.css";
+
+#root {
+    overflow: hidden;
+}
+
 * {
     box-sizing: border-box;
 }

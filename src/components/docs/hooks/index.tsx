@@ -8,7 +8,6 @@ export default function HooksDoc() {
    useEffect(() => {
       document.querySelectorAll('code').forEach((el: any) => {
          hljs.highlightElement(el);
-         console.log('run hightlight js', { language: 'javascript' });
       });
    });
 

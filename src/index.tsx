@@ -1,6 +1,5 @@
-import Reaksi from "reaksi";
-import App from "./App";
-import "./css/App.css";
-// import './css/tailwind.css';
+import Reaksi from 'reaksi';
+import App from './App';
+import './css/App.css';
 
 Reaksi.render(<App />, document.body);

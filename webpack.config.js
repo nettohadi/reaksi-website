@@ -2,7 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const devMode = process.env.NODE_ENV.trim() !== 'production';
+const devMode = process.env.NODE_ENV !== 'production';
 
 console.log({ devMode, process: process.env.NODE_ENV });
 
@@ -15,10 +15,11 @@ module.exports = {
       publicPath: '/public/',
    },
    devServer: {
-      port: 3334,
+      port: 3335,
       historyApiFallback: true,
       contentBase: path.resolve(__dirname, 'public'),
       filename: 'bundle.js',
+      publicPath: '/',
       hot: true,
    },
    mode: 'development',
@@ -36,10 +37,12 @@ module.exports = {
             exclude: /node_modules/,
             use: [
                {
-                  loader: MiniCssExtractPlugin.loader,
-                  options: {
-                     publicPath: '/',
-                  },
+                  loader: devMode
+                     ? 'style-loader'
+                     : MiniCssExtractPlugin.loader,
+                  options: devMode
+                     ? { injectType: 'styleTag' }
+                     : { publicPath: '/' },
                },
                'css-loader',
             ],
@@ -51,7 +54,7 @@ module.exports = {
                   loader: 'file-loader',
                   options: {
                      name: '[name].[ext]',
-                     publicPath: devMode ? '/public/images/' : '/images/',
+                     publicPath: '/images/',
                      outputPath: 'images',
                   },
                },
@@ -66,7 +69,7 @@ module.exports = {
       new htmlWebpackPlugin({
          filename: 'index.html',
          hash: true,
-         publicPath: devMode ? '/public/' : '/',
+         publicPath: '/',
          template: './html_template/index.html',
       }),
       new MiniCssExtractPlugin({

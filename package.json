@@ -4,9 +4,9 @@
   "description": "reaksi template",
   "main": "index.tsx",
   "scripts": {
-    "start": "set NODE_ENV=development && webpack serve --open",
-    "dev": "set NODE_ENV=development && webpack serve",
-    "build": "set NODE_ENV=production && webpack --mode production",
+    "start": "cross-env NODE_ENV=development  webpack serve --open",
+    "dev": "cross-env NODE_ENV=development  webpack serve",
+    "build": "cross-env NODE_ENV=production  webpack --mode production",
     "test": "test"
   },
   "keywords": [
@@ -18,9 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/highlightjs": "^9.12.1",
-    "cross-env": "^7.0.3",
     "highlight.js": "^11.0.1",
-    "reaksi": "^1.0.0-alpha.47"
+    "reaksi": "^1.0.0-alpha.52"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -30,6 +29,7 @@
     "@babel/preset-typescript": "^7.13.0",
     "babel-loader": "^8.2.2",
     "babel-plugin-auto-import": "^1.1.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.6",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
