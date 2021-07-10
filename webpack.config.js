@@ -63,6 +63,7 @@ module.exports = {
    },
    resolve: {
       extensions: ['.js', '.ts', '.tsx', '.css'],
+      alias: { '@root': path.resolve(__dirname, 'src') },
    },
    plugins: [
       new htmlWebpackPlugin({
