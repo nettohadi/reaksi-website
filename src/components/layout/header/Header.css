@@ -19,11 +19,11 @@ header {
 }
 
 .logo {
-    background-image: url('../../assets/images/Reaksi_logo.png');
+    background-image: url('../../../assets/images/Reaksi_logo.png');
 }
 
 .secondary-logo {
-    background-image: url('../../assets/images/Reaksi_indigo_logo.png');
+    background-image: url('../../../assets/images/Reaksi_indigo_logo.png');
 }
 
 .logo, .secondary-logo {

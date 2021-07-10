@@ -5,6 +5,12 @@
   ],
   "plugins": [
     ["@babel/transform-react-jsx", { "pragma": "Reaksi.createElement"}],
-    ["auto-import", { "declarations": [{ "default": "Reaksi", "path": "reaksi" }]}]
+    ["auto-import", { "declarations": [{ "default": "Reaksi", "path": "reaksi" }]}],
+    ["prismjs", {
+      "languages": ["javascript", "css", "html", "jsx"],
+      "plugins": ["line-numbers", "show-language"],
+      "theme": "tomorrow",
+      "css": true
+    }]
   ]
 }

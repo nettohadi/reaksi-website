@@ -1,0 +1,12 @@
+div.code-toolbar > .toolbar > .toolbar-item {
+    display: none !important;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #252935 !important;
+    border-radius: 10px !important;
+}
+
+.code-block-wrapper {
+    box-shadow: 0 5px 25px rgb(0 0 0 / 50%);
+}

@@ -1,16 +1,8 @@
 import { useEffect } from 'reaksi';
-import hljs from 'highlight.js/lib/core';
-import javascript from 'highlight.js/lib/languages/javascript';
-hljs.registerLanguage('javascript', javascript);
-import { hooksExample } from './hooksCodes';
+import hooksExample from './hooksExample';
+import CodeBlock from '../../shared/codeBlock/CodeBlock';
 
 export default function HooksDoc() {
-   useEffect(() => {
-      document.querySelectorAll('code').forEach((el: any) => {
-         hljs.highlightElement(el);
-      });
-   });
-
    return (
       <div className='doc-wrapper'>
          <h1>Hooks</h1>
@@ -51,9 +43,7 @@ export default function HooksDoc() {
             a rerender starting from the component where that useState has been
             used.
          </p>
-         <pre>
-            <code className='sh'>{hooksExample.useState}</code>
-         </pre>
+         <CodeBlock key={1}>{hooksExample.useState}</CodeBlock>
          <h2>2. UseEffect</h2>
          <p>
             Side-Effects are at the heart of many modern Apps. Whether you want
@@ -62,9 +52,7 @@ export default function HooksDoc() {
             of the main advantages of the hooks API, that it reshapes your mind
             into thinking in effects instead of a component's lifecycle.
          </p>
-         <pre>
-            <code className='sh'>{hooksExample.useEffect}</code>
-         </pre>
+         <CodeBlock key={2}>{hooksExample.useEffect}</CodeBlock>
          <h2>3. UseRef</h2>
          <p>
             There are other hooks when using Redux, router, or context. But

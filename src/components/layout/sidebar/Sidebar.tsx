@@ -15,6 +15,18 @@ export default function Sidebar() {
       router.push('/docs/' + path);
    };
 
+   const menu = [
+      {
+         section: 'Intro',
+         subSection: [
+            {
+               title: 'What is Reaksi ?',
+               path: '/doc/what',
+            },
+         ],
+      },
+   ];
+
    return (
       <div className='sidebar-wrapper'>
          <ul className='primary-font-color'>

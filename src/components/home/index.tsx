@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'reaksi';
 import './index.css';
-import KeyFeatures from './KeyFeatures';
-import Differences from './Differences';
-import Motivations from './Motivations';
-import GetStarted from './GetStarted';
+import KeyFeatures from './keyFeatures/KeyFeatures';
+import Differences from './differences/Differences';
+import Motivations from './motivations/Motivations';
+import GetStarted from './getStarted/GetStarted';
 
 export default function Home() {
    const [count, setCount] = useState(0);

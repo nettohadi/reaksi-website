@@ -1,11 +1,11 @@
-import Feature from './Feature';
+import Feature from '../feature/Feature';
 import './KeyFeatures.css';
 // @ts-ignore
-import react from '../../assets/images/react.png';
+import react from '../../../assets/images/React.png';
 // @ts-ignore
-import redux from '../../assets/images/Redux.png';
+import redux from '../../../assets/images/redux.png';
 // @ts-ignore
-import router from '../../assets/images/router.png';
+import router from '../../../assets/images/router.png';
 
 export default function KeyFeatures() {
    return (

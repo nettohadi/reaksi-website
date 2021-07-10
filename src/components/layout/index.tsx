@@ -1,8 +1,8 @@
 import Reaksi, { useRouter } from 'reaksi';
-import Header from './Header';
-import Footer from './Footer';
-import './Layout.css';
-import Sidebar from './Sidebar';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import './index.css';
+import Sidebar from './sidebar/Sidebar';
 
 type props = {
    Page?: any;
