@@ -1,12 +1,20 @@
 import './Header.css';
-import { useRouter } from 'reaksi';
+import Reaksi, { useRouter } from 'reaksi';
 
 export default function Header() {
    const router = useRouter();
    const isDocs = router.path.substr(0, 5) === '/docs';
+   console.log({ isDocs });
    const goTo = (path: string) => {
       router.push(path);
    };
+
+   const menus = () => (
+      <ul>
+         <li onclick={() => goTo('/docs/installation')}>Docs</li>
+         <li>GitHub</li>
+      </ul>
+   );
 
    return (
       <header className={isDocs ? 'primary-bg-color' : 'secondary-bg-color'}>
@@ -23,13 +31,7 @@ export default function Header() {
          <nav
             className={isDocs ? 'secondary-font-color' : 'primary-font-color'}
          >
-            <ul>
-               <li onclick={() => goTo('/')}>Home</li>
-               {!isDocs && (
-                  <li onclick={() => goTo('/docs/installation')}>Docs</li>
-               )}
-               <li>GitHub</li>
-            </ul>
+            {!isDocs ? menus() : ''}
          </nav>
       </header>
    );

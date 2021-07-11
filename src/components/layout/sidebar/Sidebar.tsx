@@ -1,59 +1,42 @@
 import './Sidebar.css';
-import { useRouter } from 'reaksi';
+import Reaksi, { useRouter } from 'reaksi';
+import menu from '@root/components/layout/sidebar/menu';
 
 export default function Sidebar() {
    const router = useRouter();
-   const activePath = router.path.replace('/docs/', '');
+   const activePath = router.path.replace('/docs', '');
 
    const isActivePath = (path: string) => {
+      console.log(activePath === path.toLowerCase());
       return activePath === path.toLowerCase()
-         ? 'primary-bg-color secondary-font-color is-active'
+         ? ' primary-bg-color secondary-font-color is-active'
          : '';
    };
 
    const goTo = (path: string) => {
-      router.push('/docs/' + path);
+      router.push('/docs' + path);
    };
-
-   const menu = [
-      {
-         section: 'Intro',
-         subSection: [
-            {
-               title: 'What is Reaksi ?',
-               path: '/doc/what',
-            },
-         ],
-      },
-   ];
 
    return (
       <div className='sidebar-wrapper'>
          <ul className='primary-font-color'>
-            <li
-               className={isActivePath('installation')}
-               onclick={() => goTo('installation')}
-            >
-               Installation
-            </li>
-            <li className={isActivePath('hooks')} onclick={() => goTo('hooks')}>
-               Hooks
-            </li>
-            <li className={isActivePath('redux')} onclick={() => goTo('redux')}>
-               Redux
-            </li>
-            <li
-               className={isActivePath('router')}
-               onclick={() => goTo('router')}
-            >
-               Router
-            </li>
-            <li
-               className={isActivePath('context')}
-               onclick={() => goTo('context')}
-            >
-               Context
-            </li>
+            {menu.map((m) => (
+               <li className='group-menu'>
+                  {m.group}
+                  {m.items.length > 0 && (
+                     <ul>
+                        {m.items.map((i) => (
+                           <li
+                              className={'menu' + isActivePath(i.path)}
+                              onclick={() => goTo(i.path)}
+                           >
+                              {i.title}
+                           </li>
+                        ))}
+                     </ul>
+                  )}
+               </li>
+            ))}
          </ul>
       </div>
    );

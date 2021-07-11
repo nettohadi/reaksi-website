@@ -1,7 +1,7 @@
 import Feature from '../feature/Feature';
 import './KeyFeatures.css';
 // @ts-ignore
-import react from '@root/assets/images/React.png';
+import react from '@root/assets/images/react.png';
 // @ts-ignore
 import redux from '@root/assets/images/redux.png';
 // @ts-ignore

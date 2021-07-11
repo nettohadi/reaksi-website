@@ -1,12 +1,11 @@
 .main-wrapper {
     display: flex;
     flex-direction: row;
-    min-height: 88vh;
-    margin-top: 73px;
+    margin-top: 60px;
 }
 
 .main-wrapper.fixed-height {
-    max-height: 88vh;
+    height: calc(100vh - 60px);
 }
 
 .main-wrapper > main {

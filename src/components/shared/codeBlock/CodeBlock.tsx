@@ -12,7 +12,7 @@ export default function CodeBlock(props: propsType) {
    useEffect(() => {
       Prism.highlightElement(codeEl.current);
       console.log('prism highlighg');
-   }, []);
+   });
 
    return (
       <div className='code-block-wrapper'>

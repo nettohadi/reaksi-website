@@ -19,7 +19,7 @@
 
 .big-logo {
     background-image: url(/images/Reaksi_indigo_logo.png);
-    width: 100px;
+    width: 90px;
     height: 110px;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,12 @@
     line-height: 100px;
     letter-spacing: 3px;
     font-size: 60px;
+}
+
+@media screen and (max-width: 768px){
+    .big-logo-wrapper > h1 {
+        letter-spacing: 1px;
+    }
 }
 
 .banner h3 {
@@ -70,15 +76,23 @@
     justify-content: center;
     gap: 40px;
 }
+
+
 header {
     color:red;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 20px 5px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
     width: 100vw;
     border-bottom: 1px solid rgba(141, 186, 111, 0.58);
+}
+
+@media screen and (max-width: 768px){
+    header {
+        padding: 5px 10px 5px 5px;
+    }
 }
 
 
@@ -131,12 +145,11 @@ nav > ul > li {
 .main-wrapper {
     display: flex;
     flex-direction: row;
-    min-height: 88vh;
-    margin-top: 73px;
+    margin-top: 60px;
 }
 
 .main-wrapper.fixed-height {
-    max-height: 88vh;
+    height: calc(100vh - 60px);
 }
 
 .main-wrapper > main {
@@ -159,114 +172,280 @@ nav > ul > li {
     list-style: none;
 }
 
-.sidebar-wrapper li {
+.sidebar-wrapper ul ul {
+    padding-left: 0px;
+}
+
+.sidebar-wrapper li.group-menu {
     font-size: 20px;
-    margin: 25px 0px;
+}
+
+.sidebar-wrapper li.menu {
+    font-size: 17px;
+    margin: 18px 0px;
     max-width: 150px;
     text-align: left;
     padding: 5px 0px 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+    color: rgb(176, 176, 176);
 }
 
-.sidebar-wrapper li:not(.is-active):hover {
+.sidebar-wrapper li.menu.is-active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.sidebar-wrapper li.menu:not(.is-active):hover {
     background-color: rgba(141, 186, 111, 0.56);
     color: black;
     transition: all .8s;
 }
-/*
-
-Atom One Dark by Daniel Gamage
-Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
-
-base:    #282c34
-mono-1:  #abb2bf
-mono-2:  #818896
-mono-3:  #5c6370
-hue-1:   #56b6c2
-hue-2:   #61aeee
-hue-3:   #c678dd
-hue-4:   #98c379
-hue-5:   #e06c75
-hue-5-2: #be5046
-hue-6:   #d19a66
-hue-6-2: #e6c07b
-
-*/
-
-.hljs {
-  color: #abb2bf;
-  background: #282c34;
+div.code-toolbar > .toolbar > .toolbar-item {
+    display: none !important;
 }
 
-.hljs-comment,
-.hljs-quote {
-  color: #5c6370;
-  font-style: italic;
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #252935 !important;
+    border-radius: 10px !important;
 }
 
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #c678dd;
+.code-block-wrapper {
+    box-shadow: 0 5px 25px rgb(0 0 0 / 50%);
+}
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
 }
 
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #e06c75;
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
 }
 
-.hljs-literal {
-  color: #56b6c2;
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
 }
 
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta .hljs-string {
-  color: #98c379;
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
+div.code-toolbar {
+	position: relative;
 }
 
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #d19a66;
+div.code-toolbar > .toolbar {
+	position: absolute;
+	top: .3em;
+	right: .2em;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
 }
 
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #61aeee;
+div.code-toolbar:hover > .toolbar {
+	opacity: 1;
 }
 
-.hljs-built_in,
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: #e6c07b;
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
 }
 
-.hljs-emphasis {
-  font-style: italic;
+div.code-toolbar > .toolbar > .toolbar-item {
+	display: inline-block;
 }
 
-.hljs-strong {
-  font-weight: bold;
+div.code-toolbar > .toolbar > .toolbar-item > a {
+	cursor: pointer;
 }
 
-.hljs-link {
-  text-decoration: underline;
+div.code-toolbar > .toolbar > .toolbar-item > button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+	color: #bbb;
+	font-size: .8em;
+	padding: 0 .5em;
+	background: #f5f2f0;
+	background: rgba(224, 224, 224, 0.2);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
+}
+
+div.code-toolbar > .toolbar > .toolbar-item > a:hover,
+div.code-toolbar > .toolbar > .toolbar-item > a:focus,
+div.code-toolbar > .toolbar > .toolbar-item > button:hover,
+div.code-toolbar > .toolbar > .toolbar-item > button:focus,
+div.code-toolbar > .toolbar > .toolbar-item > span:hover,
+div.code-toolbar > .toolbar > .toolbar-item > span:focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ccc;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999;
+}
+
+.token.punctuation {
+	color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+	color: #e2777a;
+}
+
+.token.function-name {
+	color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+	color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+	color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+	color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+	color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+	color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token.inserted {
+	color: green;
+}
+
+:root {
+    --primary-color: #1a1e2b;
+    --secondary-color: #8dba6f;
+    --text-color: rgb(176, 176, 176);
 }
 
 * {
@@ -295,6 +474,10 @@ h1, h2, h3, h4, h5 {
 
 .primary-font-color {
     color: #8dba6f;
+}
+
+.text-font-color {
+    color: var(--text-color);
 }
 
 .primary-border-color{
@@ -337,6 +520,14 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
+@media screen and (max-width: 768px){
+    .primary-button.big,
+    .secondary-button.big  {
+        min-width: 150px;
+    }
+}
+
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -370,6 +561,13 @@ h1, h2, h3, h4, h5 {
 
 .flex-row {
     flex-direction: row;
+}
+
+@media screen and (max-width: 500px){
+    .flex-row {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .flex-column {
@@ -409,7 +607,7 @@ h1 {
 }
 
 .doc-wrapper {
-    padding: 30px;
+    padding: 20px;
     color: rgb(176, 176, 176);
     max-width: 1050px;
     margin: 0 auto;
@@ -445,4 +643,5 @@ code.sh {
     font-size: 17px;
     width: 100%;
     display: block;
+    overflow-x: auto;
 }

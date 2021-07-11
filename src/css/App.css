@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+Pro&display=swap');
 
-#root {
-    overflow: hidden;
+
+:root {
+    --primary-color: #1a1e2b;
+    --secondary-color: #8dba6f;
+    --text-color: rgb(176, 176, 176);
 }
 
 * {
@@ -30,6 +33,10 @@ h1, h2, h3, h4, h5 {
 
 .primary-font-color {
     color: #8dba6f;
+}
+
+.text-font-color {
+    color: var(--text-color);
 }
 
 .primary-border-color{
@@ -72,6 +79,14 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
+@media screen and (max-width: 768px){
+    .primary-button.big,
+    .secondary-button.big  {
+        min-width: 150px;
+    }
+}
+
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -105,6 +120,13 @@ h1, h2, h3, h4, h5 {
 
 .flex-row {
     flex-direction: row;
+}
+
+@media screen and (max-width: 500px){
+    .flex-row {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
 
 .flex-column {
@@ -144,7 +166,7 @@ h1 {
 }
 
 .doc-wrapper {
-    padding: 30px;
+    padding: 20px;
     color: rgb(176, 176, 176);
     max-width: 1050px;
     margin: 0 auto;
@@ -180,4 +202,5 @@ code.sh {
     font-size: 17px;
     width: 100%;
     display: block;
+    overflow-x: auto;
 }

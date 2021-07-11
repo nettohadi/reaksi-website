@@ -1,12 +1,18 @@
 header {
     color:red;
-    padding: 10px 20px 10px 10px;
+    padding: 5px 20px 5px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     position: fixed;
     width: 100vw;
     border-bottom: 1px solid rgba(141, 186, 111, 0.58);
+}
+
+@media screen and (max-width: 768px){
+    header {
+        padding: 5px 10px 5px 5px;
+    }
 }
 
 
