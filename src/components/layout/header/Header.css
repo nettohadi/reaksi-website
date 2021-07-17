@@ -1,5 +1,4 @@
 header {
-    color:red;
     padding: 5px 20px 5px 10px;
     display: flex;
     flex-direction: row;
@@ -7,6 +6,7 @@ header {
     position: fixed;
     width: 100vw;
     border-bottom: 1px solid rgba(141, 186, 111, 0.58);
+    z-index: 11;
 }
 
 @media screen and (max-width: 768px){

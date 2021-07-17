@@ -2,11 +2,17 @@ div.code-toolbar > .toolbar > .toolbar-item {
     display: none !important;
 }
 
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
+pre{
     background: #252935 !important;
     border-radius: 10px !important;
+    padding: 20px 20px;
+    box-shadow: 0 5px 25px rgb(0 0 0 / 50%);
+    overflow-x: auto;
 }
 
-.code-block-wrapper {
-    box-shadow: 0 5px 25px rgb(0 0 0 / 50%);
+
+@media screen and (max-width: 768px){
+    pre code {
+        font-size: .9rem !important;
+    }
 }

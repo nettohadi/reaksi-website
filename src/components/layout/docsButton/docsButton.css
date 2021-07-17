@@ -1,0 +1,33 @@
+.docs-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 11;
+    border: none;
+    transition: all .5s;
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+   .docs-button {
+       display: block;
+   }
+}
+
+.docs-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    transition: all .5s;
+}
+
+.docs-button:active {
+    font-size: 2.5rem;
+}

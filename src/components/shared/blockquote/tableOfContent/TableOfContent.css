@@ -1,0 +1,28 @@
+.table-of-content-wrapper {
+    padding: 10px;
+    background-color: rgba(141, 186, 111, 0.31);
+    /* color: white; */
+    margin: 10px 0px;
+    border-left: 3px solid cadetblue;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.table-of-content-wrapper ul {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.table-of-content-wrapper li {
+    list-style: inherit;
+    margin: 0px 0px 10px 20px;
+}
+
+.table-of-content-wrapper a {
+    color: var(--text-color);
+    text-decoration-line: underline;
+}
+
+.table-of-content-wrapper .title {
+    text-align: left;
+    margin-bottom: 15px;
+}

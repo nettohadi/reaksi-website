@@ -4,11 +4,14 @@
     ["@babel/typescript", { "jsxPragma": "Reaksi.createElement" }]
   ],
   "plugins": [
-    ["@babel/transform-react-jsx", { "pragma": "Reaksi.createElement"}],
+    ["@babel/transform-react-jsx", {
+      "pragma": "Reaksi.createElement",
+      "pragmaFrag": "Reaksi.Fragment"
+    }],
     ["auto-import", { "declarations": [{ "default": "Reaksi", "path": "reaksi" }]}],
     ["prismjs", {
-      "languages": ["javascript", "css", "html", "jsx"],
-      "plugins": ["line-numbers", "show-language"],
+      "languages": ["javascript", "css", "html", "jsx", "bash"],
+      "plugins": ["show-language"],
       "theme": "tomorrow",
       "css": true
     }]

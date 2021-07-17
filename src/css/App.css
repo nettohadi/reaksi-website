@@ -1,31 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&family=Source+Sans+Pro&display=swap');
-
+@import "common.css";
 
 :root {
     --primary-color: #1a1e2b;
-    --secondary-color: #8dba6f;
+    --secondary-color: #96e067;
     --text-color: rgb(176, 176, 176);
-}
-
-* {
-    box-sizing: border-box;
+    --mobile-screen: 768px;
 }
 
 code {
-    line-height: 28px;
+    line-height: 30px !important;
 }
 
-body,html {
-    margin: 0px;
-    overflow: auto;
-    background-color: #1a1e2b;
-    font-family: Source Sans Pro;
+.section-title {
+    scroll-margin-top: 5rem;
 }
-
-h1, h2, h3, h4, h5 {
-    margin: 0px;
-}
-
 
 .primary-bg-color {
     background-color: #8dba6f;
@@ -166,7 +155,7 @@ h1 {
 }
 
 .doc-wrapper {
-    padding: 20px;
+    padding: 20px 30px;
     color: rgb(176, 176, 176);
     max-width: 1050px;
     margin: 0 auto;
@@ -174,7 +163,7 @@ h1 {
 
 .doc-wrapper h1 {
     text-align: center;
-    font-size: 60px;
+    font-size: 3rem;
     letter-spacing: 3px;
 }
 
@@ -184,7 +173,7 @@ h1 {
 
 
 .doc-wrapper p {
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 2rem;
 }
 
@@ -197,7 +186,7 @@ h1 {
 code.sh {
     margin-top: 40px;
     padding: 15px;
-    background-color: #1f253b;
+    background-color: rgb(37, 41, 53);
     border-radius: 10px;
     font-size: 17px;
     width: 100%;

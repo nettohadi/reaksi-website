@@ -15,6 +15,7 @@ module.exports = {
       publicPath: '/public/',
    },
    devServer: {
+      host: '192.168.1.9',
       port: 3335,
       historyApiFallback: true,
       contentBase: path.resolve(__dirname, 'public'),
@@ -59,11 +60,26 @@ module.exports = {
                },
             ],
          },
+         {
+            test: /\.md$/,
+            use: [
+               {
+                  loader: 'html-loader',
+               },
+               {
+                  loader: 'markdown-loader',
+                  options: {},
+               },
+            ],
+         },
       ],
    },
    resolve: {
       extensions: ['.js', '.ts', '.tsx', '.css'],
-      alias: { '@root': path.resolve(__dirname, 'src') },
+      alias: {
+         '@root': path.resolve(__dirname, 'src'),
+         '@shared': path.resolve(__dirname, 'src/components/shared'),
+      },
    },
    plugins: [
       new htmlWebpackPlugin({

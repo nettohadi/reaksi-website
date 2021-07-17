@@ -17,8 +17,11 @@
   "author": "hadi_sy",
   "license": "MIT",
   "dependencies": {
+    "html-loader": "^2.1.2",
+    "markdown-loader": "^6.0.0",
+    "marked": "^2.1.3",
     "prismjs": "^1.24.1",
-    "reaksi": "^1.0.0-alpha.52"
+    "reaksi": "^1.0.0-alpha.61"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

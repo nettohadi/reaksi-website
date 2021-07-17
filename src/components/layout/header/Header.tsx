@@ -4,7 +4,7 @@ import Reaksi, { useRouter } from 'reaksi';
 export default function Header() {
    const router = useRouter();
    const isDocs = router.path.substr(0, 5) === '/docs';
-   console.log({ isDocs });
+
    const goTo = (path: string) => {
       router.push(path);
    };

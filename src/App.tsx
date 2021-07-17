@@ -1,21 +1,27 @@
 import Home from './components/home';
 import Layout from './components/layout';
 import { Route, Router } from 'reaksi';
-import HooksDoc from './components/docs/hooks';
-import InstallationDoc from './components/docs/installation';
-import ReduxDoc from './components/docs/redux';
-import RouterDoc from './components/docs/router';
-import ContextDoc from './components/docs/context';
+import HooksDoc from './components/contents/hooks';
+// import InstallationDoc from './components/contents/installation';
+import ReduxDoc from './components/contents/redux';
+import RouterDoc from './components/contents/router';
+import ContextDoc from './components/contents/context';
+import ComponentDoc from '@root/components/contents/component';
+import Doc from '@root/components/doc/Doc';
 
 export default function App() {
    console.log('rendered App');
+
    return (
       <Router>
          <Route path='/' exact>
             <Layout Page={Home} />
          </Route>
-         <Route path='/docs/installation' exact>
-            <Layout Page={InstallationDoc} />
+         <Route path='/docs'>
+            <Layout Page={Doc} />
+         </Route>
+         <Route path='/docs/component' exact>
+            <Layout Page={ComponentDoc} />
          </Route>
          <Route path='/docs/hooks' exact>
             <Layout Page={HooksDoc} />
