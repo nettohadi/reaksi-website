@@ -6,7 +6,6 @@ import Motivations from './motivations/Motivations';
 import GetStarted from './getStarted/GetStarted';
 
 export default function Home() {
-   const [count, setCount] = useState(0);
    const router = useRouter();
 
    useEffect(() => {

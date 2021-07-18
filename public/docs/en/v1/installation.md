@@ -1,6 +1,9 @@
 # Installation
 
-React and other popular UI frameworks and libraries usually provide a CLI to quickly setup development environment for their user. This makes getting started on any of them easy and straight forward. Unfortunately, Reaksi does not have a CLI yet, but we're planning to create one in the future. For now, you can clone our ready made template on GitHub to get started using Reaksi.
+React and other popular UI libraries usually provide a CLI to quickly setup development environment for their users. 
+This makes getting started on any of them easy and straight forward. Unfortunately, Reaksi does not have a CLI yet, 
+but we're planning to create one in the future. For now, you can clone our ready made template on GitHub to get 
+started using Reaksi.
 
 Here are the 3 steps to get started with Reaksi :
 
