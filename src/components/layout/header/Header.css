@@ -9,6 +9,11 @@ header {
     z-index: 11;
 }
 
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media screen and (max-width: 768px){
     header {
         padding: 5px 10px 5px 5px;

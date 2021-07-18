@@ -1,24 +1,22 @@
 # Hooks
 
-Hooks is a new concept that allows you to compose state and side
-effects. They allow you to reuse stateful logic between components.
+Hooks is a new concept that allows you to use state and side
+effects without writing a class.
 
 <Warning>
-    We expect you to have at least a basic <un></un>derstanding of React before
-    going any further. We skip a lot of details regarding core concept
-    and everything, so it will be confusing if you don't know React.
+    To avoid confusion, we expect you to have at least a basic
+    understanding of React before going any further. We skip a lot of
+    details regarding the core concept in this documentation.
 </Warning>
 
+Hooks are only used inside functional components. It solves the "this" 
+problem when using class component. With hooks, states and side effects are more 
+flexible. Also, you can easily reuse and extract code from any component
+by creating custom hooks.
 
-Hooks are used inside functional component, and avoid many pitfalls
-of the "this" keyword relied on by the class components API. Instead
-of accessing properties from the component instance, hooks rely on
-closures.
-
-
-We're planning to incorporate all React hooks into Reaksi. But it it
-will take some time before we can do all of them. Here are all hooks
-we created so far :
+We're planning to incorporate more React hooks into Reaksi. But, it
+will take some time before we can do all of them. Here are all the hooks 
+that we've created so far :
 
 <TOC>
     <ul>
@@ -28,23 +26,22 @@ we created so far :
     </ul>
 </TOC>
 
-<h2 className='section-title' id='useState'>
+<h2 class='section-title' id='useState'>
     UseState
 </h2>
 
-This hook accepts an argument, this will be the initial state. When
-invoking this hook returns an array of two variables. The first
-being the current state and the second one being the setter for our
-state.
+This hook return a value, and a function / setter to update it. The hook 
+accepts one argument, which will be used as the initial state when component 
+renders for the first time. 
 
+when the setter is invoked with a new state, the component will 
+re-render. The setter also accept a callback as an argument.
+This callback will be invoked and get the current state 
+as its first argument.
 
-Our setter behaves similar to the setter of our classic state. It
-accepts a value or a function with the currentState as argument.
+During subsequent re-renders, the first value returned by useState will always 
+be the most recent state after applying updates.
 
-
-When you call the setter and the state is different, it will trigger
-a rerender starting from the component where that useState has been
-used.
 
 ```jsx
 import { useState } from 'reaksi';
@@ -65,15 +62,18 @@ const Counter = () => {
 }
 ```
 
-<h2 className='section-title' id='useEffect'>
+<h2 class='section-title' id='useEffect'>
     UseEffect
 </h2>
 
-Side-Effects are at the heart of many modern Apps. Whether you want
-to fetch some data from an API or trigger an effect on the document,
-you'll find that the useEffect fits nearly all your needs. It's one
-of the main advantages of the hooks API, that it reshapes your mind
-into thinking in effects instead of a component's lifecycle.
+Other than state, your component will most likely perform some kind 
+of side-effects. It can be fetching data from an API or even updating 
+the state based on some conditions. UseEffect hook changes the way 
+we apply effects, rather than relying on lifecycle, it forces us to think 
+in effects instead.
+
+This approach open a whole  different possibilities, and can even make us 
+creative.
 
 ```jsx
 import { useEffect } from 'reaksi'
@@ -96,7 +96,7 @@ function WindowWidth(props) {
 ```
 
 
-<h2 className='section-title' id='useRef'>
+<h2 class='section-title' id='useRef'>
     UseRef
 </h2>
 
@@ -109,16 +109,17 @@ A common use case is to store a reference to a DOM node.
 ```jsx
 import {useRef} from 'reaksi';
 
-function Component() {
-  // Initialize useRef with an initial value of `null`
-  const input = useRef(null);
-  const onClick = () => input.current && input.current.focus();
-
-  return (
-    <>
-      <input ref={input} />
-      <button onClick={onClick}>Focus input</button>
-    </>
-  );
+function TextInputWithFocusButton() {
+   const inputEl = useRef(null);
+   const onButtonClick = () => {
+      // `current` points to the mounted text input element
+      inputEl.current.focus();
+   };
+   return (
+      <>
+         <input ref={inputEl} type="text" />
+         <button onClick={onButtonClick}>Focus the input</button>
+      </>
+   );
 }
 ```

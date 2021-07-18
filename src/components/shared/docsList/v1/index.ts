@@ -6,8 +6,8 @@ const docsListV1: MenuType[] = [
       group: 'Intro',
       items: [
          {
-            title: 'What is Reaksi JS ?',
-            path: `/${version}/intro`,
+            title: 'What is Reaksi ?',
+            path: `/${version}/reaksi`,
          },
          {
             title: 'Installation Guide',
@@ -27,20 +27,16 @@ const docsListV1: MenuType[] = [
             path: `/${version}/hooks`,
          },
          {
+            title: 'Context',
+            path: `/${version}/context`,
+         },
+         {
             title: 'Redux',
             path: `/${version}/redux`,
          },
          {
             title: 'Router',
             path: `/${version}/router`,
-         },
-         {
-            title: 'Context',
-            path: `/${version}/context`,
-         },
-         {
-            title: 'References',
-            path: `/${version}/references`,
          },
       ],
    },

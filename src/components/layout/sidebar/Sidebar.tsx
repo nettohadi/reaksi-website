@@ -18,13 +18,24 @@ export default function Sidebar({ key }: PropsType) {
          : '';
    };
 
-   const goTo = (path: string) => {
-      router.push('/docs' + path);
+   const goTo = (path: string, isDoc = true) => {
+      router.push((isDoc ? '/docs' : '') + path);
    };
 
    return (
-      <div className='sidebar-wrapper'>
+      <div className='sidebar-wrapper thin-scrollbar'>
          <ul className='primary-font-color'>
+            <li className='group-menu'>
+               Links
+               <ul>
+                  <li className='menu' onclick={() => goTo('/', false)}>
+                     Home
+                  </li>
+                  <li className='menu'>
+                     <a href='https://github.com/nettohadi/reaksi'>GitHub</a>
+                  </li>
+               </ul>
+            </li>
             {docsList[version]?.map((doc) => (
                <li className='group-menu'>
                   {doc.group}

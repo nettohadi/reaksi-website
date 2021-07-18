@@ -1,7 +1,8 @@
-export default function Footer(){
-    return (
-        <footer>
-            <h1>This is Footer</h1>
-        </footer>
-    );
+export default function Footer() {
+   return (
+      <footer>
+         <div></div>
+         <h2></h2>
+      </footer>
+   );
 }

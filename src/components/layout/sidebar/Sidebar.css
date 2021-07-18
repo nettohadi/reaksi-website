@@ -3,6 +3,12 @@
     background-color: #151a23;
     padding-top: 20px;
     height: 100%;
+    overflow-y: auto;
+}
+
+.sidebar-wrapper a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 .mobile-sidebar-wrapper {

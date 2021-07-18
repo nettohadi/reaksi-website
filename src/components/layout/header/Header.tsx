@@ -11,14 +11,19 @@ export default function Header() {
 
    const menus = () => (
       <ul>
-         <li onclick={() => goTo('/docs/installation')}>Docs</li>
-         <li>GitHub</li>
+         <li onclick={() => goTo('/docs/v1/reaksi')}>Docs</li>
+         <li>
+            <a href='https://github.com/nettohadi/reaksi'>GitHub</a>
+         </li>
       </ul>
    );
 
    return (
       <header className={isDocs ? 'primary-bg-color' : 'secondary-bg-color'}>
-         <div className='logo_wrapper' onclick={() => goTo('/')}>
+         <div
+            className='logo_wrapper no-clicked-highlight'
+            onclick={() => goTo('/')}
+         >
             <div className={isDocs ? 'secondary-logo' : 'logo'}></div>
             <h2
                className={

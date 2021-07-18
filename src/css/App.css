@@ -49,6 +49,13 @@ code {
     color: #1a1e2b;
     border: 2px solid #1a1e2b;
 }
+
+.primary-button a,
+.secondary-button a {
+    text-decoration: none;
+    color: inherit
+}
+
 .secondary-button {
     background-color: #1a1e2b;;
     color: #8dba6f;

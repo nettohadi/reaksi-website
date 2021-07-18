@@ -12,6 +12,12 @@ Run the following command to clone the template.
 npx degit nettohadi/reaksi-template [your-project-name]
 ```
 
+If you prefer to use Typescript, you can clone the template for Typescript.
+
+```bash
+npx degit nettohadi/reaksi-template-ts [your-project-name]
+```
+
 ## 2. Install Dependencies
 
 First, cd into [your-project-name] folder.

@@ -28,3 +28,36 @@ h1, h2, h3, h4, h5 {
     -ms-user-select: none;
     user-select: none;
 }
+
+.background-animate {
+    background: linear-gradient(-90deg, #1a1e2b, #313337, #444343);
+    background-size: 400% 400%;
+    animation: gradient 1.5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Works on Chrome/Edge/Safari */
+.thin-scrollbar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4c4b4b;
+    border-radius: 6px;
+    border: 2px solid #4c4b4b;
+}

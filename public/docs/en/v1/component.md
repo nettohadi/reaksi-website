@@ -18,7 +18,7 @@ and side effects into our rendered output.
     </ul>
 </TOC>
 
-<h2 className='section-title' id='functionalComponent'>
+<h2 class='section-title' id='functionalComponent'>
     Functional Component
 </h2>
 
@@ -42,7 +42,7 @@ Reaksi.render(App, document.body);
 // Result: <div>This is My First Component.</div>
 ```
 
-<h2 className='section-title' id='fragment'>
+<h2 class='section-title' id='fragment'>
     Fragment
 </h2>
 

@@ -4,6 +4,8 @@ import './index.css';
 import Sidebar from './sidebar/Sidebar';
 import { MobileSidebar } from './sidebar/MobileSidebar';
 import DocsButton from '@root/components/layout/docsButton/docsButton';
+import Spacer from '@shared/spacer/Spacer';
+import Footer from '@root/components/layout/footer/Footer';
 
 type props = {
    Page?: any;
@@ -37,10 +39,12 @@ export default function Layout({ Page }: props) {
          <Header />
          <div className={`main-wrapper ${isDocs ? 'fixed-height' : ''}`}>
             {isDocs && <SidebarAndDocsButton />}
-            <main ref={main}>
+            <main className='thin-scrollbar' ref={main}>
                <Page />
+               <Spacer height={100} />
             </main>
          </div>
+         <Footer />
       </div>
    );
 }

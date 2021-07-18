@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'reaksi';
+import { useEffect, useRouter, useState } from 'reaksi';
 import './index.css';
 import KeyFeatures from './keyFeatures/KeyFeatures';
 import Differences from './differences/Differences';
@@ -7,6 +7,7 @@ import GetStarted from './getStarted/GetStarted';
 
 export default function Home() {
    const [count, setCount] = useState(0);
+   const router = useRouter();
 
    useEffect(() => {
       console.log('rendered Home');
@@ -22,8 +23,15 @@ export default function Home() {
                </div>
                <h3>A Simple React-like Library</h3>
                <div style={{ marginTop: 20 }}>
-                  <button className='secondary-button big'>Get Started</button>
-                  <button className='primary-button big'>GitHub</button>
+                  <button
+                     className='secondary-button big'
+                     onclick={() => router.push('/docs/v1/reaksi')}
+                  >
+                     Get Started
+                  </button>
+                  <button className='primary-button big'>
+                     <a href='https://github.com/nettohadi/reaksi'>GitHub</a>
+                  </button>
                </div>
             </div>
          </div>
@@ -31,7 +39,6 @@ export default function Home() {
          <Differences />
          <Motivations />
          <GetStarted />
-         <div style={{ height: 100 }}></div>
       </div>
    );
 }
