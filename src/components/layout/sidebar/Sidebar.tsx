@@ -1,14 +1,16 @@
 import './Sidebar.css';
-import Reaksi, { useRouter } from 'reaksi';
-import menu from '@root/components/layout/sidebar/menu';
+import { useRouter } from 'reaksi';
+import docsList from '@shared/docsList';
 
 type PropsType = {
    key?: number;
 };
 
 export default function Sidebar({ key }: PropsType) {
+   const version = 'v1';
+
    const router = useRouter();
-   const activePath = router.path.replace('/docs/v1', '');
+   const activePath = router.path.replace('/docs', '');
 
    const isActivePath = (path: string) => {
       return activePath === path.toLowerCase()
@@ -23,12 +25,12 @@ export default function Sidebar({ key }: PropsType) {
    return (
       <div className='sidebar-wrapper'>
          <ul className='primary-font-color'>
-            {menu.map((m) => (
+            {docsList[version]?.map((doc) => (
                <li className='group-menu'>
-                  {m.group}
-                  {m.items.length > 0 && (
+                  {doc.group}
+                  {doc.items.length > 0 && (
                      <ul>
-                        {m.items.map((item) => (
+                        {doc.items.map((item) => (
                            <li
                               className={'menu' + isActivePath(item.path)}
                               onclick={() => goTo(item.path)}

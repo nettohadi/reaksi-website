@@ -1,24 +1,17 @@
-type MenuItemType = {
-   title: string;
-   path: string;
-};
+import { MenuType } from '@root/types';
 
-type MenuType = {
-   group: string;
-   items: MenuItemType[];
-};
-
-const menu: MenuType[] = [
+const version = 'v1';
+const docsListV1: MenuType[] = [
    {
       group: 'Intro',
       items: [
          {
             title: 'What is Reaksi JS ?',
-            path: '/intro',
+            path: `/${version}/intro`,
          },
          {
             title: 'Installation Guide',
-            path: '/installation',
+            path: `/${version}/installation`,
          },
       ],
    },
@@ -27,30 +20,30 @@ const menu: MenuType[] = [
       items: [
          {
             title: 'Component',
-            path: '/component',
+            path: `/${version}/component`,
          },
          {
             title: 'Hooks',
-            path: '/hooks',
+            path: `/${version}/hooks`,
          },
          {
             title: 'Redux',
-            path: '/redux',
+            path: `/${version}/redux`,
          },
          {
             title: 'Router',
-            path: '/router',
+            path: `/${version}/router`,
          },
          {
             title: 'Context',
-            path: '/context',
+            path: `/${version}/context`,
          },
          {
             title: 'References',
-            path: '/references',
+            path: `/${version}/references`,
          },
       ],
    },
 ];
 
-export default menu;
+export default docsListV1;
