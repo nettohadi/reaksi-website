@@ -65,14 +65,14 @@ function TodoItems() {
  )
 }
 
-const App = (
+const App = () => (
  <ol>
    <TodoItems />
    <li>Exercise</li>
  </ol>
 );
 
-Reaksi.render(App, container);
+Reaksi.render(<App/>, container);
 
 // Result :
 // <ul>
@@ -101,14 +101,14 @@ function TodoItems() {
  )
 }
 
-const App = (
+const App = () => (
  <ol>
    <TodoItems />
    <li>Exercise</li>
  </ol>
 );
 
-Reaksi.render(App, container);
+Reaksi.render(<App/>, container);
 
 // Result :
 // <ul>

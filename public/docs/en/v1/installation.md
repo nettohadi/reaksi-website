@@ -5,7 +5,7 @@ This makes getting started on any of them easy and straight forward. Unfortunate
 but we're planning to create one in the future. For now, you can clone our ready made template on GitHub to get 
 started using Reaksi.
 
-Here are the 3 steps to get started with Reaksi :
+Here are the 4 steps to get started with Reaksi :
 
 ## 1. Clone the GitHub template
 
@@ -29,6 +29,12 @@ First, cd into [your-project-name] folder.
 cd [your-project-name]
 ```
 
+Then, run the following command to install all dependencies.
+
+```bash
+npm install
+```
+
 ## 3. Run Local Development Server
 
 To run local development server and watch for changes :
@@ -37,4 +43,16 @@ To run local development server and watch for changes :
 npm run start
 ```
 
-We've setup Webpack hot module replacement feature in this template, so everytime you make changes, the browser will automatically refresh.
+We've setup Webpack hot module replacement feature in this template, so everytime you make changes, 
+the browser will automatically refresh.
+
+## 4. Build For Production
+
+To build the project for deployment, you can run the command below.
+
+```bash
+npm run build
+```
+
+It will generate all the necessary files in public folder. You can deploy the project 
+as static files or using any backend technology.

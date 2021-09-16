@@ -1,7 +1,7 @@
 # What is Reaksi ?
 
 Reaksi is a UI library that uses the concept of virtual dom. It is heavily inspired 
-by React and follows React API very closely.
+by React and follows its API very closely.
 
 Reaksi means "Reaction" in Indonesian language. As the creator and an Indonesian, 
 Reaksi is my reaction to React. I create Reaksi to understand how React works under 

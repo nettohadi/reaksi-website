@@ -20,7 +20,7 @@ export default function Home() {
                   <div className='big-logo'></div>
                   <h1>Reaksi JS</h1>
                </div>
-               <h3>A Simple React-like Library</h3>
+               <h3>A React-like Library with similar API</h3>
                <div style={{ marginTop: 20 }}>
                   <button
                      className='secondary-button big'

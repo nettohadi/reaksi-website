@@ -44,7 +44,7 @@ export default function Layout({ Page }: props) {
                <Spacer height={100} />
             </main>
          </div>
-         <Footer />
+         {!isDocs && <Footer />}
       </div>
    );
 }

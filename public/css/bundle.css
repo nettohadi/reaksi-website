@@ -35,12 +35,90 @@
 @media screen and (max-width: 768px){
     .big-logo-wrapper > h1 {
         letter-spacing: 1px;
+        font-size: 50px;
     }
 }
 
 .banner h3 {
     letter-spacing: 1px;
 }
+
+.reaksi-logo-wrapper {
+    height: 70px;
+    width: 70px;
+    overflow: hidden;
+    transform: rotate(45deg);
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.reaksi-logo-outer {
+    height: 100%;
+    width: 100%;
+    padding: 15%;
+    overflow: hidden;
+    border: 3px solid black;
+    animation: spin-left 6s infinite;
+}
+
+.reaksi-logo-inner {
+    height: 100%;
+    width: 100%;
+    padding: 20%;
+    overflow: hidden;
+    border: 3px solid black;
+    /*animation: spin-right 2s infinite;*/
+}
+
+.reaksi-logo-center {
+    height: 18%;
+    width: 18%;
+    background-color: black;
+    /* transform: translateY(1px); */
+    position: absolute;
+    top: 41%;
+    left: 41%;
+}
+
+@keyframes spin-right {
+    0% {
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    50% {
+        transform: rotate3d(10,10,0,360deg);
+    }
+    100% {
+        transform: rotate3d(10, 10, 0, 0);
+    }
+}
+
+@keyframes spin-left {
+    0% {
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    50% {
+        transform: rotate3d(10,10,0,-360deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 1, 0);
+    }
+}
+
+@keyframes stay-still {
+    0% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+    /*50% {*/
+    /*    transform: rotate3d(0,0,0,180deg);*/
+    /*}*/
+    100% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+}
+
+
 
 
 .feature {
@@ -294,6 +372,25 @@ nav > ul > li {
 
 .docs-button:active {
     font-size: 2.5rem;
+}
+footer {
+    height: 170px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+footer > .big-logo {
+    margin:  10px auto;
+    height: 70px;
+    width: 70px;
+}
+
+footer h3,
+footer h4{
+    text-align: center;
+    color: inherit;
 }
 .doc-wrapper {
     padding: 20px 30px;
@@ -682,7 +779,7 @@ h1, h2, h3, h4, h5 {
 }
 :root {
     --primary-color: #1a1e2b;
-    --secondary-color: #96e067;
+    --secondary-color: #8dba6f;
     --text-color: rgb(176, 176, 176);
     --mobile-screen: 768px;
 }

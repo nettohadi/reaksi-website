@@ -12,7 +12,8 @@ footer > .big-logo {
     width: 70px;
 }
 
-footer h3 {
+footer h3,
+footer h4{
     text-align: center;
     color: inherit;
 }
