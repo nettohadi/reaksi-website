@@ -18,6 +18,21 @@ export default function Header() {
       </ul>
    );
 
+   const search = () => (
+      <div className='search-wrapper'>
+         <div className='search-icon '>
+            <i class='fas fa-search'></i>
+         </div>
+         <div className='search-input'>
+            <input type='text' placeholder='Search' />
+         </div>
+         <div className='search-keys'>
+            <div className='search-key ctrl'>CTRL</div>
+            <div className='search-key'>K</div>
+         </div>
+      </div>
+   );
+
    return (
       <header className={isDocs ? 'primary-bg-color' : 'secondary-bg-color'}>
          <div
@@ -36,7 +51,7 @@ export default function Header() {
          <nav
             className={isDocs ? 'secondary-font-color' : 'primary-font-color'}
          >
-            {!isDocs ? menus() : ''}
+            {!isDocs ? menus() : search()}
          </nav>
       </header>
    );

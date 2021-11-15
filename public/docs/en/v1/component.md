@@ -13,8 +13,7 @@ and side effects into our rendered output.
 
 <TOC>
     <ul>
-        <li><a href='#functionalComponent'>Functional Component</a></li>
-        <li><a href='#fragment'>Fragment</a></li>
+        <li><a href='#functionalComponent'>Functional Component</a></li> 
     </ul>
 </TOC>
 
@@ -42,79 +41,130 @@ Reaksi.render(App, document.body);
 // Result: <div>This is My First Component.</div>
 ```
 
-<h2 class='section-title' id='fragment'>
-    Fragment
-</h2>
+[comment]: <> (<h2 class='section-title' id='fragment'>)
 
-Fragment exists to solve the limitation of JSX which requires every
-"block" to have one root element. It's particularly useful when you
-don't want to render any element as the root of your component
-because it will be semantically incorrect or will effect CSS
-styling.
+[comment]: <> (    Fragment)
 
-```jsx
-import Reaksi from 'reaksi';
+[comment]: <> (</h2>)
 
-function TodoItems() {
- return (
-   <Reaksi.Fragment>
-     <li>1.Buy Milk</li>
-     <li>2.Pay Bill</li>
-     <li>3.Study</li>
-   </Reaksi.Fragment>
- )
-}
+[comment]: <> (Fragment exists to solve the limitation of JSX which requires every)
 
-const App = () => (
- <ol>
-   <TodoItems />
-   <li>Exercise</li>
- </ol>
-);
+[comment]: <> ("block" to have one root element. It's particularly useful when you)
 
-Reaksi.render(<App/>, container);
+[comment]: <> (don't want to render any element as the root of your component)
 
-// Result :
-// <ul>
-//   <li>1.Buy Milk</li>
-//   <li>2.Pay Bill</li>
-//   <li>3.Study</li>
-//   <li>4.Exercise</li>
-// </ul>
-```
+[comment]: <> (because it will be semantically incorrect or will effect CSS)
 
-You can also use the shorter syntax for fragment, which is supported
-by most of modern transpilers. The shorter one is lot more common
-and you will see it more often.
+[comment]: <> (styling.)
 
-```jsx
-import Reaksi from 'reaksi';
+[comment]: <> (```jsx)
 
-function TodoItems() {
- return (
- // Shorter syntax
-   <>
-     <li>1.Buy Milk</li>
-     <li>2.Pay Bill</li>
-     <li>3.Study</li>
-   </>
- )
-}
+[comment]: <> (import Reaksi from 'reaksi';)
 
-const App = () => (
- <ol>
-   <TodoItems />
-   <li>Exercise</li>
- </ol>
-);
+[comment]: <> (function TodoItems&#40;&#41; {)
 
-Reaksi.render(<App/>, container);
+[comment]: <> ( return &#40;)
 
-// Result :
-// <ul>
-//   <li>1.Buy Milk</li>
-//   <li>2.Pay Bill</li>
-//   <li>3.Study</li>
-//   <li>4.Exercise</li>
-// </ul>
-```
+[comment]: <> (   <Reaksi.Fragment>)
+
+[comment]: <> (     <li>1.Buy Milk</li>)
+
+[comment]: <> (     <li>2.Pay Bill</li>)
+
+[comment]: <> (     <li>3.Study</li>)
+
+[comment]: <> (   </Reaksi.Fragment>)
+
+[comment]: <> ( &#41;)
+
+[comment]: <> (})
+
+[comment]: <> (const App = &#40;&#41; => &#40;)
+
+[comment]: <> ( <ol>)
+
+[comment]: <> (   <TodoItems />)
+
+[comment]: <> (   <li>Exercise</li>)
+
+[comment]: <> ( </ol>)
+
+[comment]: <> (&#41;;)
+
+[comment]: <> (Reaksi.render&#40;<App/>, container&#41;;)
+
+[comment]: <> (// Result :)
+
+[comment]: <> (// <ul>)
+
+[comment]: <> (//   <li>1.Buy Milk</li>)
+
+[comment]: <> (//   <li>2.Pay Bill</li>)
+
+[comment]: <> (//   <li>3.Study</li>)
+
+[comment]: <> (//   <li>4.Exercise</li>)
+
+[comment]: <> (// </ul>)
+
+[comment]: <> (```)
+
+[comment]: <> (You can also use the shorter syntax for fragment, which is supported)
+
+[comment]: <> (by most of modern transpilers. The shorter one is lot more common)
+
+[comment]: <> (and you will see it more often.)
+
+[comment]: <> (```jsx)
+
+[comment]: <> (import Reaksi from 'reaksi';)
+
+[comment]: <> (function TodoItems&#40;&#41; {)
+
+[comment]: <> ( return &#40;)
+
+[comment]: <> ( // Shorter syntax)
+
+[comment]: <> (   <>)
+
+[comment]: <> (     <li>1.Buy Milk</li>)
+
+[comment]: <> (     <li>2.Pay Bill</li>)
+
+[comment]: <> (     <li>3.Study</li>)
+
+[comment]: <> (   </>)
+
+[comment]: <> ( &#41;)
+
+[comment]: <> (})
+
+[comment]: <> (const App = &#40;&#41; => &#40;)
+
+[comment]: <> ( <ol>)
+
+[comment]: <> (   <TodoItems />)
+
+[comment]: <> (   <li>Exercise</li>)
+
+[comment]: <> ( </ol>)
+
+[comment]: <> (&#41;;)
+
+[comment]: <> (Reaksi.render&#40;<App/>, container&#41;;)
+
+[comment]: <> (// Result :)
+
+[comment]: <> (// <ul>)
+
+[comment]: <> (//   <li>1.Buy Milk</li>)
+
+[comment]: <> (//   <li>2.Pay Bill</li>)
+
+[comment]: <> (//   <li>3.Study</li>)
+
+[comment]: <> (//   <li>4.Exercise</li>)
+
+[comment]: <> (// </ul>)
+
+[comment]: <> (```)
