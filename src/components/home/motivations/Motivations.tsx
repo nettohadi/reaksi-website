@@ -5,9 +5,9 @@ export default function Motivations() {
             <h1>Our Motivation</h1>
             <div class='secondary-bg-color primary-font-color rounded-container'>
                <p style={styles.p}>
-                  We know that JavasScript ecosystem is already very crowded
-                  with UI libraries. And you know what, we're not trying to
-                  compete with them or to be the next big thing.
+                  We know that JavaScript ecosystem is already very crowded with
+                  UI libraries. And you know what, we're not trying to compete
+                  with them or to be the next big thing.
                </p>
                <p style={styles.p}>
                   So, why do this ? Well, it's simple. We build Reaksi to learn
